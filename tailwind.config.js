@@ -9,6 +9,7 @@ export default {
       darkGray: '#202020',
       white: '#F2F2F2',
       black: '#101010',
+      textGray: '#868787',
     },
     screens: {
       sm: '375px',
