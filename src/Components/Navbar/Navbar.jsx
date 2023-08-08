@@ -33,11 +33,8 @@ const Navbar = () => {
           <NavLink to="/">Contacts</NavLink>
         </div>
       </div>
-      <div className="max-md:hidden">
+      <div>
         <Switch />
-      </div>
-      <div className="md:hidden">
-        <DehazeIcon />{' '}
       </div>
     </nav>
   );

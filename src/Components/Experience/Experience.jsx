@@ -21,7 +21,7 @@ const Experience = () => {
         <div className="text-xl ms-1 font-bold">Experience</div>
       </div>
       <div className="mt-8 mx-2">
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold my-2 ">
           HELLO<span className="text-primary">!</span>
         </h1>
         <h3 className="lg:text-3xl md:text-xl max-w-screen-xl">
@@ -38,6 +38,7 @@ const Experience = () => {
               duration={e.duration}
               company={e.company}
               desc={e.desc}
+              skills={e.skills}
             />
           ))}
         </div>
