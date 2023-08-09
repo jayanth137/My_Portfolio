@@ -1,6 +1,3 @@
-import git from './icons/git.png';
-import react from './icons/react.png';
-
 export const techData = [
   {
     img: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',

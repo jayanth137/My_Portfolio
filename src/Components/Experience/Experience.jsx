@@ -6,7 +6,7 @@ import { ExperienceData } from './ExperienceData.js';
 
 const Experience = () => {
   return (
-    <div className="lg:m-28 md:m-18 sm:m-8">
+    <div className=" m-8 lg:m-28 md:m-18">
       <div className="flex items-center">
         <>
           {' '}

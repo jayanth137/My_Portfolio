@@ -1,6 +1,7 @@
 import React from 'react';
 import project from './icons/project.png';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './ProjectCard.jsx';
+import { projectData } from './projectData.js';
 
 const Projects = () => {
   return (
@@ -11,7 +12,16 @@ const Projects = () => {
       </div>
       <p></p>
       <div>
-        <ProjectCard />
+        {projectData.map((e, Index) => (
+          <ProjectCard
+            key={Index}
+            img={e.img}
+            desc={e.desc}
+            liveLink={e.liveLink}
+            gitLink={e.gitLink}
+            title={e.title}
+          />
+        ))}
       </div>
     </div>
   );
