@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from './Images/logo.png';
 import { useState } from 'react';
 import Switch from './Switch';
@@ -27,17 +27,26 @@ const Navbar = () => {
          max-md:bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 "
       >
         <div className="flex md:flex-row flex-col space-x-8 md:items-center md:gap-[4vw]">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/">Experience</NavLink>
-          <NavLink to="/">Projects</NavLink>
-          <NavLink to="/">Contacts</NavLink>
+          <nav className="flex sm:justify-center space-x-4">
+            {[
+              ['Home', '/'],
+              ['Experience', '/'],
+              ['Projects', '/projects'],
+              ['Contact', '/contact'],
+            ].map(([title, url]) => (
+              <Link
+                to={url}
+                key={title}
+                className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
+              >
+                {title}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
-      <div className="max-md:hidden">
+      <div>
         <Switch />
-      </div>
-      <div className="md:hidden">
-        <DehazeIcon />{' '}
       </div>
     </nav>
   );
