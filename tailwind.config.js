@@ -10,16 +10,17 @@ export default {
       white: '#F2F2F2',
       black: '#101010',
       textGray: '#868787',
+      contGray: '#DDDCDC',
     },
     screens: {
       sm: '375px',
-      // => @media (min-width: 576px) { ... }
+      // => @media (min-width: 375px) { ... }
 
       md: '760px',
-      // => @media (min-width: 960px) { ... }
+      // => @media (min-width: 760px) { ... }
 
       lg: '1024px',
-      // => @media (min-width: 1440px) { ... }
+      // => @media (min-width: 1024px) { ... }
     },
   },
   plugins: [],

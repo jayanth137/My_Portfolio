@@ -1,26 +1,38 @@
 import React from 'react';
 import vite from './icons/vitejs.svg';
 import netlify from './icons/netlify.png';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const Footer = () => {
   return (
-    <div className=" flex justify-around lg:mt-28 md:mt-18 sm:mt-8 mb-4 px-60  ">
+    <div className=" flex justify-around mt-12 mb-2   ">
       <div className="flex">
-        <p>Build with </p>
+        <p className="text-xs md:text-base">Build with </p>
         <div className="mx-2">
           <img src={vite} alt="" className="w-8 h-8" />
         </div>
-        <p>deployed on</p>
+        <p className="text-xs md:text-base">deployed on</p>
         <div className="mx-2">
           <img src={netlify} alt="" className="w-8 h-8" />
         </div>
-        by Jayanth Koppala
+        <p className="text-xs md:text-base">by Jayanth Koppala</p>
       </div>
-      <div className="flex">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+      <div className="flex space-x-2 max-md:hidden">
+        <div>
+          <LinkedInIcon />
+        </div>
+        <div>
+          <AlternateEmailIcon />
+        </div>
+        <div>
+          <GitHubIcon />
+        </div>
+        <div>
+          <TwitterIcon />
+        </div>
       </div>
     </div>
   );
