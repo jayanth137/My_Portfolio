@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import protest from './images/protest.png';
-import ContactCard from './contactCard';
+import ContactCard from './ContactCard.jsx';
 
 const Contact = () => {
   const [Card, setCard] = useState(false);
