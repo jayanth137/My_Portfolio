@@ -6,7 +6,7 @@ import { ExperienceData } from './ExperienceData.js';
 
 const Experience = () => {
   return (
-    <div className=" m-8 lg:m-28 md:m-18">
+    <div id="experience" className=" m-8 lg:m-28 md:m-18">
       <div className="flex items-center">
         <>
           {' '}
@@ -30,7 +30,7 @@ const Experience = () => {
         </h3>
       </div>
       <div>
-        <div className="lg:flex    ">
+        <div className="lg:flex   grow ">
           {ExperienceData.map((e, index) => (
             <ExperienceCard
               key={index}

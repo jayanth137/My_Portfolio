@@ -14,7 +14,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col mx-10 sm:mx-auto my-4 sm:my-auto  w-80 h-64 sm:w-full sm:h-90  py-40 sm:py-62 items-center justify-center rounded-3xl space-y-2 bg-primary container ">
+    <div className="flex flex-col mx-10 sm:mx-auto my-4 sm:my-auto  w-auto h-64 sm:w-full sm:h-90  py-40 sm:py-62 items-center justify-center rounded-3xl space-y-2 bg-primary container ">
       <img src={protest} alt="share " className=" w-12 h-12" />
       <h1 className="lg:text-3xl font-bold md:text-2xl sm:text-xl">
         Love what you See?
