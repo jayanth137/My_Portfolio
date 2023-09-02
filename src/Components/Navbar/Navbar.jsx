@@ -4,14 +4,6 @@ import Logo from './Images/logo.png';
 import Switch from './Switch';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const hamburger = useRef(null);
-
-  function toggleMenu() {
-    setIsOpen(!isOpen);
-    hamburger.current.classList.toggle('active');
-  }
-
   const navigate = useNavigate();
   let element;
 
@@ -28,21 +20,6 @@ const Navbar = () => {
   };
 
   let menuRef = useRef();
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handler);
-
-    return () => {
-      document.removeEventListener('mousedown', handler);
-    };
-  });
 
   return (
     <nav className="flex justify-between items-center w[92%] mx-28 my-5 rounded-3xl py-4 px-4 bg-darkGray max-md:m-0 max-md:rounded-none">
@@ -65,7 +42,6 @@ const Navbar = () => {
                   className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
                   onClick={() => {
                     gotoId(title.toLowerCase());
-                    toggleMenu();
                   }}
                 >
                   {title}

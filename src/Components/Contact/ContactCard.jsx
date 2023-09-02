@@ -6,6 +6,8 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import CancelIcon from '@mui/icons-material/Cancel';
+import { contactData } from './contactData.js';
+import { Link } from 'react-router-dom';
 
 const ContactCard = ({ onClose }) => {
   return (
@@ -18,11 +20,18 @@ const ContactCard = ({ onClose }) => {
           Hey! Let's Connect
         </h1>
         <div className="flex flex-row">
-          <button className="bg-contGray text-black px-8 py-4 rounded-2xl mx-1 hover:bg-black hover:text-white">
+          <button
+            type="link"
+            className="bg-contGray text-black px-8 py-4 rounded-2xl mx-1 hover:bg-black hover:text-white"
+          >
             <FileCopyIcon />
             Resume
           </button>
-          <button className="bg-black px-8 py-4 rounded-2xl mx-1  hover:text-black hover:bg-contGray">
+
+          <button
+            type="email"
+            className="bg-black px-8 py-4 rounded-2xl mx-1  hover:text-black hover:bg-contGray"
+          >
             <CallMadeIcon />
             Mail Me
           </button>

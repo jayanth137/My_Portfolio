@@ -6,17 +6,23 @@ import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 
+
 const ProjectCard = ({ img, gitLink, liveLink, title, desc }) => {
   return (
-    <div className="flex   w-auto m-4 p-4 sm:w-full sm:mx-auto sm:p-auto sm:py-16   bg-darkGray space-x-4 container  rounded-3xl  ">
-      <div className="flex flex-col space-y-4 md:mx-8 grow  ">
-        <Link to={gitLink}>
-          <GitHubIcon className="bg-black w-8 h-8" />
-        </Link>
-        <Link to={liveLink}>
-          <InsertLinkIcon />
-        </Link>
-      </div>
+    <section className="flex flex-col grow md:flex-row  w-auto m-4 p-4  md:w-full sm:mx-auto sm:p-auto sm:py-16   bg-darkGray space-x-4 container  rounded-3xl  ">
+      <>
+        <div className="   w-auto h-auto grow m-auto">
+          <img src={img} alt="Admin" />
+        </div>
+        <div className="flex flex-col space-y-4 md:mx-8 grow  ">
+          <Link to={gitLink}>
+            <GitHubIcon className="bg-black w-8 h-8" />
+          </Link>
+          <Link to={liveLink}>
+            <InsertLinkIcon />
+          </Link>
+        </div>
+      </>
       <div className="flex flex-col space-y-4 ">
         <h1 className="text-3xl ">{title}</h1>
         <desc className=" text-xs md:text-base ">{desc}</desc>
@@ -28,10 +34,7 @@ const ProjectCard = ({ img, gitLink, liveLink, title, desc }) => {
           </button>
         </Link>
       </div>
-      <div className=" sm w-auto h-auto grow m-auto">
-        <img src={img} alt="Admin" />
-      </div>
-    </div>
+    </section>
   );
 };
 

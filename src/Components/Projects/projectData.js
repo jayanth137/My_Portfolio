@@ -1,4 +1,5 @@
 import Admin from './icons/AdminPanel.png';
+import Ecommerce from './icons/Ecommerce.png';
 
 export const projectData = [
   {
@@ -9,7 +10,7 @@ export const projectData = [
     desc: "I've successfully crafted a comprehensive React admin panel dashboard from the ground up. Leveraging React Hooks, Material UI for design, routers for smooth navigation, and integrating charts for data visualization. The entire frontend was meticulously developed, showcasing a seamless blend of functionality and aesthetics.",
   },
   {
-    img: Admin,
+    img: Ecommerce,
     gitLink: 'https://github.com/jayanth137/Ecommerce-Mern_stack_app',
     liveLink: 'https://gama-ecommerce.netlify.app/',
     title: 'Ecommerce Application',

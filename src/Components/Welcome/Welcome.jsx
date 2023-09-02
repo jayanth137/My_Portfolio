@@ -86,7 +86,7 @@ const Welcome = () => {
             </NavLink>
           </div>
         </div>
-        <div className=" flex-grow lg:flex-col sm:flex">
+        <div className=" flex-grow lg:flex-col xl:hidden sm:flex">
           <div className="lg:mx-0 lg:my-2  basis-1/2  sm:mx-2">
             {' '}
             <Link to="/" onClick={openCard}>
@@ -107,9 +107,9 @@ const Welcome = () => {
           </div>
           <div className=" flex-grow basis-1/2">
             {' '}
-            <Link to="/https://drive.google.com/file/d/1-KmSUFM-tFSKModC3ASHWq_-sLNgNuoJ/view?usp=sharing">
+            <a href="/https://drive.google.com/file/d/1-KmSUFM-tFSKModC3ASHWq_-sLNgNuoJ/view?usp=sharing">
               <div className="bg-primary lg:px-24 lg:py-16 rounded-[40px] w-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 px-4 py-4">
-                <div className="   md:flex items-center">
+                <div className="   lg:flex lg:flex-row items-center">
                   <img
                     src={resume}
                     width={40}
@@ -120,7 +120,7 @@ const Welcome = () => {
                   Resume
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
