@@ -1,38 +1,40 @@
 import { Link } from 'react-router-dom';
-import Admin from './icons/AdminPanel.png';
+
 import github from './icons/github.png';
 import link from './icons/link.png';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InsertLinkIcon from '@mui/icons-material/InsertLink';
 
-const ProjectCard = () => {
+
+const ProjectCard = ({ img, gitLink, liveLink, title, desc }) => {
   return (
-    <div className="flex  w-auto h-80 bg-darkGray space-x-4  rounded-3xl m-8 p-4 py-12">
-      <div className="w-28 h-28  ">
-        <Link to="https://github.com/jayanth137/GamaAdmin-App">
-          <img src={github} />
-        </Link>
-        <Link to="https://gamaadmin.netlify.app/">
-          <img src={link} />
-        </Link>
-      </div>
+    <section className="flex flex-col grow md:flex-row  w-auto m-4 p-4  md:w-full sm:mx-auto sm:p-auto sm:py-16   bg-darkGray space-x-4 container  rounded-3xl  ">
+      <>
+        <div className="   w-auto h-auto grow m-auto">
+          <img src={img} alt="Admin" />
+        </div>
+        <div className="flex flex-col space-y-4 md:mx-8 grow  ">
+          <Link to={gitLink}>
+            <GitHubIcon className="bg-black w-8 h-8" />
+          </Link>
+          <Link to={liveLink}>
+            <InsertLinkIcon />
+          </Link>
+        </div>
+      </>
       <div className="flex flex-col space-y-4 ">
-        <h1 className="text-3xl ">title</h1>
-        <desc className=" ">
-          desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-          deleniti cumque quaerat, non provident eligendi aliquam voluptatem
-          itaque pariatur commodi dolorem officiis maiores eius consequatur
-          velit sequi perspiciatis enim ad!
-        </desc>
-        <button className="bg-black rounded-full w-fit px-4 py-2 items-center ">
-          {' '}
-          Full Case Study
-          <EastOutlinedIcon />
-        </button>
+        <h1 className="text-3xl ">{title}</h1>
+        <desc className=" text-xs md:text-base ">{desc}</desc>
+        <Link to={gitLink}>
+          <button className="bg-black rounded-full w-fit px-4 py-2 items-center ">
+            {' '}
+            Full Case Study
+            <EastOutlinedIcon />
+          </button>
+        </Link>
       </div>
-      <div className="w-auto h-auto m-auto">
-        <img src={Admin} alt="Admin" />
-      </div>
-    </div>
+    </section>
   );
 };
 

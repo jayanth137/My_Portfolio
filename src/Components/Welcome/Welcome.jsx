@@ -1,17 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import sparkles from './Images/sparkles.png';
 import at from './Images/at.png';
 import X from './Images/x.png';
 import resume from './Images/attach.png';
 import hat from './Images/hat.png';
+import ContactCard from '../Contact/ContactCard';
 
 const Welcome = () => {
+  const [Card, setCard] = useState(false);
+
+  const openCard = () => {
+    setCard(true);
+  };
+
+  const closeCard = () => {
+    setCard(false);
+  };
   return (
     <div>
       {' '}
       <div className="flex flex-col items-center">
-        <div className="lg:text-8xl md:text-6xl mt-12 font-bold text-white text-5xl	">
+        <div className="lg:text-8xl md:text-6xl mt-12 font-bold text-white text-4xl	">
           Jayanth Koppala
         </div>
         <div className="lg:text-6xl mt-6 text-white text-3xl	">
@@ -21,7 +31,7 @@ const Welcome = () => {
           Practitioner
         </div>
       </div>
-      <div className="  lg:flex lg:flex-row lg:mx-28 sm:mx-14 sm:flex-col">
+      <div className="  lg:flex lg:flex-row lg:mx-28 mx-14 sm:flex-col">
         <div className="flex-grow">
           <Link to="/Navbar">
             <div className="bg-primary p-8  lg:p-40 rounded-[40px] w-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 ">
@@ -59,7 +69,7 @@ const Welcome = () => {
           </div>
           <div className=" flex-grow lg:mx-2  sm:mt-2   ">
             {' '}
-            <Link to="/Projects">
+            <NavLink to="/projects">
               <div className="bg-secondary w-auto text-black lg:p-48 lg:py-16 lg:w-10px rounded-[40px]  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300  px-6 py-4  ">
                 {' '}
                 <div className="lg:flex lg:flex-row  lg:items-center sm:flex-col ">
@@ -73,13 +83,13 @@ const Welcome = () => {
                   Projects
                 </div>
               </div>
-            </Link>
+            </NavLink>
           </div>
         </div>
-        <div className=" flex-grow lg:flex-col sm:flex">
+        <div className=" flex-grow lg:flex-col xl:hidden sm:flex">
           <div className="lg:mx-0 lg:my-2  basis-1/2  sm:mx-2">
             {' '}
-            <Link to="/Contact">
+            <Link to="/" onClick={openCard}>
               <div className="bg-lightGray text-black w-auto lg:px-24 lg:py-16 rounded-[40px]  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 px-4 py-4">
                 <div className="lg:flex lg:flex-row lg:items-center sm:flex-col">
                   <img
@@ -93,12 +103,13 @@ const Welcome = () => {
                 </div>
               </div>
             </Link>
+            {Card && <ContactCard onClose={closeCard} />}
           </div>
           <div className=" flex-grow basis-1/2">
             {' '}
-            <Link to="/https://drive.google.com/file/d/1-KmSUFM-tFSKModC3ASHWq_-sLNgNuoJ/view?usp=sharing">
+            <a href="/https://drive.google.com/file/d/1-KmSUFM-tFSKModC3ASHWq_-sLNgNuoJ/view?usp=sharing">
               <div className="bg-primary lg:px-24 lg:py-16 rounded-[40px] w-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 px-4 py-4">
-                <div className="   md:flex items-center">
+                <div className="   lg:flex lg:flex-row items-center">
                   <img
                     src={resume}
                     width={40}
@@ -109,7 +120,7 @@ const Welcome = () => {
                   Resume
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
