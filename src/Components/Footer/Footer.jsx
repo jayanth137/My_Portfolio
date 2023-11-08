@@ -44,13 +44,31 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          <AlternateEmailIcon />
+          <Link
+            to="mailto:jayanth.sms.in@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AlternateEmailIcon />
+          </Link>
         </div>
         <div>
-          <GitHubIcon />
+          <Link
+            to="https://github.com/jayanth137"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </Link>
         </div>
         <div>
-          <TwitterIcon />
+          <Link
+            to="https://twitter.com/JayanthKoppala"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterIcon />
+          </Link>
         </div>
       </div>
     </div>

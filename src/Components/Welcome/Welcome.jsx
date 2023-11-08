@@ -35,7 +35,7 @@ const Welcome = () => {
       <div className="  lg:flex lg:flex-row lg:mx-28 mx-14 sm:flex-col">
         <div className="flex-grow">
           <Link to="about" smooth={true} duration={1000}>
-            <div className="bg-primary p-8  lg:p-40 rounded-[40px] w-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 ">
+            <div className="bg-primary p-8  lg:p-40 rounded-[40px] w-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 cursor-pointer ">
               <div className="lg:flex lg:items-center ">
                 <img
                   src={sparkles}
@@ -53,7 +53,7 @@ const Welcome = () => {
           <div className="flex-grow lg:mx-2 lg:mb-0 sm:mr-2 sm:my-2 ">
             {' '}
             <Link to="Experience" smooth={true} duration={1000}>
-              <div className="bg-darkGray px-6 py-4 lg:p-48 w-auto  lg:py-16 rounded-[40px] space-y-5  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 ">
+              <div className="bg-darkGray px-6 py-4 lg:p-48 w-auto  lg:py-16 rounded-[40px] space-y-5  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 cursor-pointer">
                 {' '}
                 <div className="lg:flex lg:flex-row lg:items-center sm:flex-col">
                   <img
@@ -71,7 +71,7 @@ const Welcome = () => {
           <div className=" flex-grow lg:mx-2  sm:mt-2   ">
             {' '}
             <Link to="Projects" smooth={true} duration={1000}>
-              <div className="bg-secondary w-auto text-black lg:p-48 lg:py-16 lg:w-10px rounded-[40px]  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300  px-6 py-4  ">
+              <div className="bg-secondary w-auto text-black lg:p-48 lg:py-16 lg:w-10px rounded-[40px]  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300  px-6 py-4  cursor-pointer">
                 {' '}
                 <div className="lg:flex lg:flex-row  lg:items-center sm:flex-col ">
                   <img
@@ -91,7 +91,7 @@ const Welcome = () => {
           <div className="lg:mx-0 lg:my-2  basis-1/2  sm:mx-2">
             {' '}
             <Link to="/" onClick={openCard}>
-              <div className="bg-lightGray text-black w-auto lg:px-24 lg:py-16 rounded-[40px]  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 px-4 py-4">
+              <div className="bg-lightGray text-black w-auto lg:px-24 lg:py-16 rounded-[40px]  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90  duration-300 px-4 py-4 cursor-pointer">
                 <div className="lg:flex lg:flex-row lg:items-center sm:flex-col">
                   <img
                     src={at}
