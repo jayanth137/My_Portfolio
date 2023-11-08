@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Images/logo.png';
 import Switch from './Switch';
+import SendIcon from '@mui/icons-material/Send';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -15,7 +16,8 @@ const Navbar = () => {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 500);
     } else {
-      window.location.href = '#' + id;
+      element = document.getElementById(id);
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
 
@@ -52,7 +54,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <Switch />
+        <SendIcon fontSize="medium" className="mr-4" />
       </div>
     </nav>
   );
